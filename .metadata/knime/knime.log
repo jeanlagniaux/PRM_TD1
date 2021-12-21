@@ -1,0 +1,433 @@
+2021-12-19 18:16:22,358 : WARN  : main :  : Node : OSM Map View : 3:2 : Latitude and/or Longitude columns for map markers do not exist.
+2021-12-19 18:16:25,772 : ERROR : KNIME-Worker-3-CSV Reader 3:1 :  : Node : CSV Reader : 3:1 : Execute failed: Row with ID 'Row10971' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [10971, AFA, 20167, 41.9844089346, 8.79828936731, 2A, 0]
+org.knime.filehandling.core.node.table.reader.type.mapping.MappingRuntimeException: Row with ID 'Row10971' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [10971, AFA, 20167, 41.9844089346, 8.79828936731, 2A, 0]
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.processAndThrowTypeMapperException(DefaultMultiTableRead.java:169)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:137)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.fillRowOutput(MultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:173)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:556)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1259)
+	at org.knime.core.node.Node.execute(Node.java:1039)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:559)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:365)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:219)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.filehandling.core.node.table.reader.type.mapping.TypeMapperException: java.lang.NumberFormatException: For input string: "2A"
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:107)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.toRow(DefaultIndividualTableReader.java:108)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:146)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:135)
+	... 16 more
+Caused by: java.lang.NumberFormatException: For input string: "2A"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:187)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:428)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:283)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:105)
+	... 20 more
+2021-12-19 18:16:25,789 : WARN  : KNIME-Worker-3-CSV Reader 3:1 :  : Node : OSM Map View : 3:2 : Latitude and/or Longitude columns for map markers do not exist.
+2021-12-19 18:16:47,988 : WARN  : main :  : Node : CSV Reader : 3:3 : Please specify a file
+2021-12-19 18:17:15,198 : ERROR : KNIME-Worker-4-CSV Reader 3:3 :  : Node : CSV Reader : 3:3 : Execute failed: Row with ID 'Row10971' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [10971, AFA, 20167, 41.9844089346, 8.79828936731, 2A, 0]
+org.knime.filehandling.core.node.table.reader.type.mapping.MappingRuntimeException: Row with ID 'Row10971' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [10971, AFA, 20167, 41.9844089346, 8.79828936731, 2A, 0]
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.processAndThrowTypeMapperException(DefaultMultiTableRead.java:169)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:137)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.fillRowOutput(MultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:173)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:556)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1259)
+	at org.knime.core.node.Node.execute(Node.java:1039)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:559)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:365)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:219)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.filehandling.core.node.table.reader.type.mapping.TypeMapperException: java.lang.NumberFormatException: For input string: "2A"
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:107)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.toRow(DefaultIndividualTableReader.java:108)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:146)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:135)
+	... 16 more
+Caused by: java.lang.NumberFormatException: For input string: "2A"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:187)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:428)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:283)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:105)
+	... 20 more
+2021-12-19 18:17:54,591 : ERROR : KNIME-Worker-5-CSV Reader 3:3 :  : Node : CSV Reader : 3:3 : Execute failed: Row with ID 'Row10971' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [AFA, 20167, 41.9844089346, 8.79828936731, 2A, 0]
+org.knime.filehandling.core.node.table.reader.type.mapping.MappingRuntimeException: Row with ID 'Row10971' can't be converted to the configured data types. Increasing the number of scanned rows or changing the target types might resolve the issue. Content of row: [AFA, 20167, 41.9844089346, 8.79828936731, 2A, 0]
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.processAndThrowTypeMapperException(DefaultMultiTableRead.java:169)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:137)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.fillRowOutput(MultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:173)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:556)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1259)
+	at org.knime.core.node.Node.execute(Node.java:1039)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:559)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:365)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:219)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.filehandling.core.node.table.reader.type.mapping.TypeMapperException: java.lang.NumberFormatException: For input string: "2A"
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:107)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.toRow(DefaultIndividualTableReader.java:108)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:146)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultMultiTableRead.fillRowOutput(DefaultMultiTableRead.java:135)
+	... 16 more
+Caused by: java.lang.NumberFormatException: For input string: "2A"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:187)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:428)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:283)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:105)
+	... 20 more
+2021-12-19 18:18:26,117 : WARN  : main :  : Node : OSM Map View : 3:2 : Latitude and/or Longitude columns for map markers do not exist.
+2021-12-19 18:18:40,392 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,413 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,421 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,421 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,421 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,421 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,421 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,422 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,423 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,424 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,425 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,426 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,427 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,428 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,429 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,430 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,431 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,432 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,433 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,434 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,435 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,436 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:40,437 : WARN  : KNIME-Worker-4-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:18:53,809 : WARN  : main :  : Node : Color Manager : 3:4 : Selected column "nom_commune_postal" with default nominal color mapping.
+2021-12-19 18:19:19,244 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,275 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,292 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,293 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,294 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,295 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,296 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,297 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,298 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,299 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,300 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,301 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,302 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!
+2021-12-19 18:19:19,303 : WARN  : KNIME-Worker-6-OSM Map View 3:2 :  : Node : OSM Map View : 3:2 : Missing values in marker coordinates encountered. These markers have been skipped!

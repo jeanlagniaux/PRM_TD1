@@ -1,0 +1,2 @@
+C:\Users\cobi-\EspacePerso\COURS\M2 MIAGE\PRM\PRM2\TD\TD1\commune.csv
+knime://LOCAL/commune.csv

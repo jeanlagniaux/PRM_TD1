@@ -1,0 +1,47 @@
+
+{
+    "version": "4.4.1.v202108201740",
+    "created": "2021-12-19 18:13",
+    "nodestats": {
+        "nodes": [
+            {
+                "id": "org.knime.ext.osm.node.mapview.OsmMapViewNodeFactory#OSM Map View",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 277,
+                "nrcreated": 1,
+                "successor": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.io.filehandling.csv.reader.CSVTableReaderNodeFactory#CSV Reader",
+                "nrexecs": 1,
+                "nrfails": 3,
+                "exectime": 496,
+                "nrcreated": 1,
+                "successor": "org.knime.ext.osm.node.mapview.OsmMapViewNodeFactory#OSM Map View"
+            },
+            {
+                "id": "org.knime.base.node.viz.property.color.ColorManager2NodeFactory#Color Manager",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 2,
+                "nrcreated": 1,
+                "successor": "org.knime.ext.osm.node.mapview.OsmMapViewNodeFactory#OSM Map View"
+            }
+        ],
+        "metaNodes": {
+        },
+        "wrappedNodes": {
+        }
+    },
+    "uptime": 474672,
+    "workflowsOpened": 0,
+    "remoteWorkflowsOpened": 0,
+    "workflowsImported": 0,
+    "workflowsExported": 0,
+    "launches": 2,
+    "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
+    "timeSinceLastStart": 259353,
+    "crashes": 0,
+    "properlyShutDown": true
+}
